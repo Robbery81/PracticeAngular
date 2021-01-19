@@ -1,0 +1,14 @@
+<p>--[class.red]</p>
+<p [class.red] = 'colorize'>{{name}}</p>
+
+<app-input
+  [(name)]="name"
+></app-input>
+
+<app-template [portalData]="portalData">
+  <ng-template let-item>
+    <p *ngIf="item % 2 === 0" style="color: red;">{{item}}</p>
+    <p *ngIf="item % 2 !== 0" style="color: blue;">{{item}}</p>
+  </ng-template>
+</app-template>
+<p>Router link:</p>
